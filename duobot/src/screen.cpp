@@ -31,6 +31,8 @@ namespace screen
 	{
 		cv::Mat img1 = cv::imread(imgPth, cv::IMREAD_GRAYSCALE);
 		cv::Mat img2 = image::captureWnd(oswin::hProc, *tl, *br);
+		image::showImg("window", img1); //TODO: Delete
+		image::showImg("window2", img2); //TODO: Delete
 		return image::imgCmp(img1, img2) >= minCertainty;
 	}
 
@@ -50,6 +52,8 @@ namespace screen
 		RECT position;
 		GetWindowRect(oswin::hProc, &position);
 		int horiz = position.right - position.left;
-		return Point(384, 256);
+		int vert = position.bottom - position.top;
+		std::cout << "Size: horiz: " << horiz << " vert: " << vert << std::endl; //TODO: Delete
+		return Point(horiz / 2, 256);
 	}
 }

@@ -24,6 +24,11 @@ namespace oswin
 
 	BOOL CALLBACK childProc(HWND hwnd, LPARAM lparam)
 	{
+		RECT position;
+		GetWindowRect(oswin::hProc, &position);
+		int horiz = position.right - position.left;
+		int vert = position.bottom - position.top;
+
 		if ((*(LPARAM*)lparam) == 2)
 		{
 			hProc = hwnd;
