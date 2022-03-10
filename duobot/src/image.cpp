@@ -41,7 +41,7 @@ namespace image
 		cv::destroyWindow(wnd);
 	}
 
-	cv::Mat captureWnd(HWND hwnd, screen::Point tl, screen::Point br)
+	cv::Mat captureWnd(HWND hwnd, POINT tl, POINT br)
 	{
 		HDC hwindowDC, hwindowCompatibleDC;
 		int height, width, srcheight, srcwidth;

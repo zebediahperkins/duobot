@@ -1,14 +1,26 @@
 #include <oswin.h>
 #include <processenv.h>
-#include <string>
+#include <iostream>
+#include <widget.h>
 
 namespace oswin
 {
 	HWND osHandle;
 	HWND hProc;
+	std::string imgPth, jsonPth;
 
 	PROCESS_INFORMATION startOSClient()
 	{
+		#ifdef _DEBUG
+			char pwd[128];
+			GetCurrentDirectoryA(128, pwd);
+			imgPth = std::string(pwd) + "\\x64\\Release\\Build\\ref\\images";
+			jsonPth = std::string(pwd) + "\\x64\\Release\\Build\\ref\\json";
+		#else
+			imgPth = "\\ref\\images";
+			jsonPth = "\\ref\\json";
+		#endif
+		widget::populate();
 		char buf[128];
 		GetEnvironmentVariableA("USERPROFILE", buf, 128);
 		std::string userProfile(buf);
@@ -24,15 +36,19 @@ namespace oswin
 
 	BOOL CALLBACK childProc(HWND hwnd, LPARAM lparam)
 	{
-		RECT position;
-		GetWindowRect(oswin::hProc, &position);
-		int horiz = position.right - position.left;
-		int vert = position.bottom - position.top;
-
 		if ((*(LPARAM*)lparam) == 2)
 		{
-			hProc = hwnd;
-			return false;
+			RECT position;
+			GetWindowRect(hwnd, &position);
+			int horiz = position.right - position.left;
+			int vert = position.bottom - position.top;
+			if (horiz == 765 && vert == 503)
+			{
+				hProc = hwnd;
+				return false;
+			}
+			std::cout << "Error: Client is not in fixed mode." << std::endl;
+			hProc = 0;
 		}
 		++(*(LPARAM*)lparam);
 		return true;
@@ -53,8 +69,9 @@ namespace oswin
 		return true;
 	}
 
-	HWND initHandle(int pid)
+	HWND updateHandle(int pid)
 	{
+		if (!pid) return 0;
 		foundPID = false;
 		EnumWindows(winProc, pid);
 		if (osHandle)
@@ -63,5 +80,12 @@ namespace oswin
 			EnumChildWindows(osHandle, childProc, (LPARAM)&lparam);
 		}
 		return hProc;
+	}
+
+	bool isProcActive(HANDLE pid)
+	{
+		DWORD status;
+		GetExitCodeProcess(pid, &status);
+		return status == STILL_ACTIVE;
 	}
 }

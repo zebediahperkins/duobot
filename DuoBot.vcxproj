@@ -82,7 +82,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/duobot/include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)duobot\include</IncludePath>
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
   </PropertyGroup>
@@ -152,17 +152,23 @@
   <ItemGroup>
     <ClCompile Include="duobot\src\image.cpp" />
     <ClCompile Include="duobot\src\oswin.cpp" />
+    <ClCompile Include="duobot\src\player.cpp" />
     <ClCompile Include="duobot\src\screen.cpp" />
+    <ClCompile Include="duobot\src\widget.cpp" />
     <ClCompile Include="exscript\exscript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="duobot\include\oswin.h" />
+    <ClInclude Include="duobot\include\player.h" />
     <ClInclude Include="duobot\include\screen.h" />
     <ClInclude Include="duobot\include\image.h" />
+    <ClInclude Include="duobot\include\widget.h" />
+    <ClInclude Include="duobot\include\json\json.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="duobot\.gitignore" />
+    <None Include="x64\Release\Build\ref\json\widgets.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -27,6 +27,12 @@
     <ClCompile Include="duobot\src\image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="duobot\src\widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="duobot\src\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="duobot\include\oswin.h">
@@ -38,9 +44,19 @@
     <ClInclude Include="duobot\include\image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="duobot\include\widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="duobot\include\json\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="duobot\include\player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="duobot\.gitignore" />
     <None Include=".gitignore" />
+    <None Include="x64\Release\Build\ref\json\widgets.json" />
   </ItemGroup>
 </Project>

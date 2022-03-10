@@ -21,5 +21,5 @@ namespace image
 	// @param tl The top left point of the crop
 	// @param br The bottom right point of the crop
 	// @returns Cropped window capture as grayscale
-	cv::Mat captureWnd(HWND hwnd, screen::Point tl, screen::Point br);
+	cv::Mat captureWnd(HWND hwnd, POINT tl, POINT br);
 }
