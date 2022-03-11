@@ -1,8 +1,48 @@
 #include <player.h>
 #include <widget.h>
+#include <screen.h>
 
 namespace player
 {
+	void selectWorldMenu(int worldIndex)
+	{
+		Sleep(500);
+		widget::widgets[WRLDSLCTBTN].click();
+		Sleep(500);
+		widget::widgets[WRLDCHSBTN].click();
+		Sleep(500);
+	}
+
+	void login(const char* username, const char* password, int worldIndex)
+	{
+		while (getStatus() == Status::none);
+		selectWorldMenu(worldIndex);
+		while (getStatus() != Status::logged_in)
+		{
+			switch (getStatus())
+			{
+				case Status::login_screen:
+					widget::widgets[LGNPRMPTBTN].click();
+					break;
+				case Status::info_prompt:
+					screen::sendText(username);
+					Sleep(100);
+					screen::sendKey(VK_TAB);
+					Sleep(100);
+					screen::sendText(password);
+					Sleep(100);
+					widget::widgets[LGNBTN].click();
+					break;
+				case Status::splash_screen:
+					widget::widgets[PLAYBTN].click();
+					break;
+				default:
+					break;
+			}
+			Sleep(1500);
+		}
+	}
+
 	Status getStatus()
 	{
 		if

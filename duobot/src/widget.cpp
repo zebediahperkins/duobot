@@ -33,9 +33,12 @@ namespace widget
 		image::showImg("win", image::captureWnd(oswin::hProc, tl, br));
 	}
 
-	void Widget::click()
+	void Widget::click() //TODO: Make this click a random (pseudo-random?) point between tl and br
 	{
-		screen::click(tl.x, tl.y); //TODO: Make this click a random (pseudo-random?) point between tl and br
+		POINT p;
+		p.x = tl.x + ((br.x - tl.x) / 2);
+		p.y = tl.y + ((br.y - tl.y) / 2);
+		screen::click(p);
 	}
 
 	std::ostream& operator<<(std::ostream& os, const Widget &wdgt)

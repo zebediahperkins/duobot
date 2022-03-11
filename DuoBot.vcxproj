@@ -170,6 +170,45 @@
     <None Include="duobot\.gitignore" />
     <None Include="x64\Release\Build\ref\json\widgets.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\accountActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\accountInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\combatActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\combatInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\emotesActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\emotesInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\equipmentActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\equipmentInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\friendsActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\friendsInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\groupingActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\groupingInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\inventoryActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\inventoryInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\logoutActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\logoutInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\magicActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\magicInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\musicActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\musicInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\prayerActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\prayerInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\questsActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\questsInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\settingsActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\settingsInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\skillsActive.png" />
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\skillsInactive.png" />
+    <Image Include="x64\Release\Build\ref\images\login\cnctngTxt.png" />
+    <Image Include="x64\Release\Build\ref\images\login\lgnBtn.png" />
+    <Image Include="x64\Release\Build\ref\images\login\lgnCnclBtn.png" />
+    <Image Include="x64\Release\Build\ref\images\login\lgnPrmptBtn.png" />
+    <Image Include="x64\Release\Build\ref\images\login\newUsrBtn.png" />
+    <Image Include="x64\Release\Build\ref\images\login\playBtn.png" />
+    <Image Include="x64\Release\Build\ref\images\login\wrldChsBtn.png" />
+    <Image Include="x64\Release\Build\ref\images\login\wrldCnclBtn.png" />
+    <Image Include="x64\Release\Build\ref\images\login\wrldSlctBtn.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

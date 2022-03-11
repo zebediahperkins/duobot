@@ -3,13 +3,30 @@
 
 namespace screen
 {
-	void click(int x, int y) //TODO: Experiment with sleeps and/or mouse move
+	void click(POINT p) //TODO: Experiment with sleeps and/or mouse move
 	{
 		RECT position;
 		GetWindowRect(oswin::hProc, &position);
-		int lparam = MAKELPARAM(x + position.left, y + position.top);
+		int lparam = MAKELPARAM(p.x + position.left, p.y + position.top);
+		PostMessage(oswin::hProc, WM_MOUSEMOVE, 0, lparam);
+		Sleep(50);
 		PostMessage(oswin::hProc, WM_LBUTTONDOWN, 0, lparam);
+		Sleep(100);
 		PostMessage(oswin::hProc, WM_LBUTTONUP, 0, lparam);
+	}
+
+	void sendText(std::string text)
+	{
+		for (int i = 0; i < text.size(); ++i)
+		{
+			PostMessage(oswin::hProc, WM_CHAR, text[i], 0);
+			Sleep(50);
+		}
+	}
+
+	void sendKey(int keyCode)
+	{
+		PostMessage(oswin::hProc, WM_KEYDOWN, keyCode, 0);
 	}
 
 	POINT getFixedCenter()

@@ -1,14 +1,15 @@
 enum class Status
 {
-	none,
-	login_screen,
-	info_prompt,
-	connecting,
-	splash_screen,
-	logged_in
+	none = 0,
+	login_screen = 1,
+	info_prompt = 2,
+	connecting = 3,
+	splash_screen = 4,
+	logged_in = 5
 };
 
 namespace player
 {
+	void login(const char* username, const char* password, int worldIndex);
 	Status getStatus();
 }

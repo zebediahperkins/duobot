@@ -59,4 +59,117 @@
     <None Include=".gitignore" />
     <None Include="x64\Release\Build\ref\json\widgets.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\accountActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\accountInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\combatActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\combatInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\emotesActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\emotesInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\equipmentActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\equipmentInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\friendsActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\friendsInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\groupingActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\groupingInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\inventoryActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\inventoryInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\logoutActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\logoutInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\magicActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\magicInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\musicActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\musicInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\prayerActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\prayerInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\questsActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\questsInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\settingsActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\settingsInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\skillsActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\control_panel\options\skillsInactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\wrldSlctBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\cnctngTxt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\lgnBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\lgnCnclBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\lgnPrmptBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\newUsrBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\playBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\wrldChsBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="x64\Release\Build\ref\images\login\wrldCnclBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

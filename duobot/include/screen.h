@@ -1,9 +1,12 @@
 #pragma once
 
 #include <Windows.h>
+#include <string>
 
 namespace screen
 {
-	void click(int x, int y);
+	void click(POINT p);
+	void sendText(std::string text);
+	void sendKey(int keyCode);
 	POINT getFixedCenter();
 }
