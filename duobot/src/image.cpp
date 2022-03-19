@@ -1,5 +1,4 @@
 #include <image.h>
-#include <screen.h>
 
 namespace image
 {

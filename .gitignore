@@ -1,5 +1,5 @@
 ## Ignore Personal Scripts
-exscript/
+boilerplate/
 
 ## Ignore JSON Parser
 duobot/include/json/

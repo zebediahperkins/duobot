@@ -3,7 +3,7 @@
 
 namespace screen
 {
-	void click(POINT p) //TODO: Experiment with sleeps and/or mouse move
+	void click(POINT p)
 	{
 		RECT position;
 		GetWindowRect(oswin::hProc, &position);
@@ -34,6 +34,14 @@ namespace screen
 		POINT p;
 		p.x = 382;
 		p.y = 251;
+		return p;
+	}
+
+	POINT getMinimapCenter()
+	{
+		POINT p;
+		p.x = 642;
+		p.y = 86;
 		return p;
 	}
 }

@@ -3,8 +3,8 @@
 #include <oswin.h>
 #include <screen.h>
 #include <json/json.h>
+
 #include <fstream>
-#include <opencv2/opencv.hpp>
 
 namespace widget
 {

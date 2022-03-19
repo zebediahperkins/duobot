@@ -151,17 +151,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="duobot\src\image.cpp" />
+    <ClCompile Include="duobot\src\inventory.cpp" />
     <ClCompile Include="duobot\src\oswin.cpp" />
     <ClCompile Include="duobot\src\player.cpp" />
     <ClCompile Include="duobot\src\screen.cpp" />
+    <ClCompile Include="duobot\src\walking.cpp" />
     <ClCompile Include="duobot\src\widget.cpp" />
-    <ClCompile Include="exscript\exscript.cpp" />
+    <ClCompile Include="boilerplate\boilerplate.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="duobot\include\inventory.h" />
     <ClInclude Include="duobot\include\oswin.h" />
     <ClInclude Include="duobot\include\player.h" />
     <ClInclude Include="duobot\include\screen.h" />
     <ClInclude Include="duobot\include\image.h" />
+    <ClInclude Include="duobot\include\walking.h" />
     <ClInclude Include="duobot\include\widget.h" />
     <ClInclude Include="duobot\include\json\json.h" />
   </ItemGroup>

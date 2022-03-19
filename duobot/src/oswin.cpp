@@ -1,7 +1,9 @@
 #include <oswin.h>
+#include <widget.h>
+
 #include <processenv.h>
 #include <iostream>
-#include <widget.h>
+#include <chrono>
 
 namespace oswin
 {
@@ -11,15 +13,15 @@ namespace oswin
 
 	PROCESS_INFORMATION startOSClient()
 	{
-		#ifdef _DEBUG
-			char pwd[128];
-			GetCurrentDirectoryA(128, pwd);
-			imgPth = std::string(pwd) + "\\x64\\Release\\Build\\ref\\images";
-			jsonPth = std::string(pwd) + "\\x64\\Release\\Build\\ref\\json";
-		#else
-			imgPth = "\\ref\\images";
-			jsonPth = "\\ref\\json";
-		#endif
+#ifdef _DEBUG
+		char pwd[128];
+		GetCurrentDirectoryA(128, pwd);
+		imgPth = std::string(pwd) + "\\x64\\Release\\Build\\ref\\images";
+		jsonPth = std::string(pwd) + "\\x64\\Release\\Build\\ref\\json";
+#else
+		imgPth = "\\ref\\images";
+		jsonPth = "\\ref\\json";
+#endif
 		widget::populate();
 		char buf[128];
 		GetEnvironmentVariableA("USERPROFILE", buf, 128);
@@ -87,5 +89,18 @@ namespace oswin
 		DWORD status;
 		GetExitCodeProcess(pid, &status);
 		return status == STILL_ACTIVE;
+	}
+
+	bool waitFor(bool (*predicate)(), int timeoutMS, int intervalMS)
+	{
+		auto startTime = std::chrono::steady_clock::now();
+		while (!predicate())
+		{
+			Sleep(intervalMS);
+			auto endTime = std::chrono::steady_clock::now();
+			auto timeSinceStart = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime).count();
+			if (timeSinceStart >= timeoutMS) return false;
+		}
+		return true;
 	}
 }

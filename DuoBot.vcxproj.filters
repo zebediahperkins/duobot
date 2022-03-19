@@ -21,7 +21,7 @@
     <ClCompile Include="duobot\src\screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="exscript\exscript.cpp">
+    <ClCompile Include="boilerplate\boilerplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="duobot\src\image.cpp">
@@ -31,6 +31,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="duobot\src\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="duobot\src\walking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="duobot\src\inventory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -51,6 +57,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="duobot\include\player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="duobot\include\walking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="duobot\include\inventory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

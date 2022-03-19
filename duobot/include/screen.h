@@ -9,4 +9,5 @@ namespace screen
 	void sendText(std::string text);
 	void sendKey(int keyCode);
 	POINT getFixedCenter();
+	POINT getMinimapCenter();
 }

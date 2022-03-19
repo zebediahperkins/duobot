@@ -12,4 +12,5 @@ namespace oswin
 	BOOL CALLBACK winProc(HWND hwnd, LPARAM lparam);
 	HWND updateHandle(int pid);
 	bool isProcActive(HANDLE pid);
+	bool waitFor(bool (*predicate)(), int timeoutMS, int intervalMS = 50);
 }
